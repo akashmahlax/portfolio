@@ -1,101 +1,271 @@
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { HiCode, HiDesktopComputer, HiSparkles, HiLightningBolt } from 'react-icons/hi';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
+      {/* Hero Section */}
+      <section className="min-h-screen flex items-center pt-20 px-6">
+        <div className="container mx-auto">
+          <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+            <div className="lg:w-1/2 text-center lg:text-left">
+              <div className="space-y-4 mb-8">
+                <h2 className="text-blue-500 text-xl font-semibold">Welcome to my portfolio</h2>
+                <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
+                  Transforming Ideas Into
+                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
+                    Digital Reality
+                  </span>
+                </h1>
+                <p className="text-gray-300 text-lg max-w-2xl">
+                  Full-stack developer specializing in building exceptional digital experiences.
+                  Bringing innovative ideas to life with clean code and cutting-edge technology.
+                </p>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+                <Link 
+                  href="/contact" 
+                  className="px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold hover:opacity-90 transition"
+                >
+                  Let's Work Together
+                </Link>
+                <Link 
+                  href="/projects" 
+                  className="px-8 py-3 rounded-full border-2 border-blue-500 text-blue-500 font-semibold hover:bg-blue-500 hover:text-white transition"
+                >
+                  View Portfolio
+                </Link>
+              </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+              <div className="flex gap-6 justify-center lg:justify-start">
+                {[
+                  { icon: FaGithub, link: "https://github.com/akashmahlax" },
+                  { icon: FaLinkedin, link: "https://linkedin.com/in/akashmahlax" },
+                  { icon: FaTwitter, link: "https://twitter.com/akashmahlax" },
+                  { icon: FaInstagram, link: "https://instagram.com/akashmahlax" },
+                ].map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-white text-2xl transition"
+                  >
+                    <social.icon />
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div className="lg:w-1/2 relative">
+              <div className="relative w-72 h-72 lg:w-[500px] lg:h-[500px]">
+                <Image
+                  src="/avatar.png"
+                  alt="Developer Portrait"
+                  fill
+                  className="rounded-full object-cover"
+                  priority
+                />
+                <div className="absolute inset-0 rounded-full bg-gradient-to-b from-blue-500/20 to-purple-500/20" />
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 px-6 bg-gray-800/50">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">What I Do</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              A structured approach to delivering high-quality solutions
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              {
+                icon: HiSparkles,
+                title: "Discovery",
+                description: "Understanding your needs and project requirements"
+              },
+              {
+                icon: HiDesktopComputer,
+                title: "Design",
+                description: "Creating intuitive and beautiful interfaces"
+              },
+              {
+                icon: HiCode,
+                title: "Development",
+                description: "Building with clean, efficient code"
+              },
+              {
+                icon: HiLightningBolt,
+                title: "Deployment",
+                description: "Launching and maintaining your solution"
+              }
+            ].map((process, index) => (
+              <div key={index} className="relative">
+                <div className="p-6 rounded-xl bg-gradient-to-br from-gray-700/50 to-gray-800/50 backdrop-blur-sm
+                              hover:from-blue-500/20 hover:to-purple-500/20 transition group">
+                  <div className="absolute -top-4 left-4 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center">
+                    {index + 1}
+                  </div>
+                  <process.icon className="text-4xl text-blue-400 mb-4 group-hover:scale-110 transition" />
+                  <h3 className="text-xl font-semibold text-white mb-2">{process.title}</h3>
+                  <p className="text-gray-400">{process.description}</p>
+                </div>
+                {index < 3 && (
+                  <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-blue-500/50" />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section - New */}
+      <section className="py-20 px-6 bg-gray-800/30">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white mb-4">Client Testimonials</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              What others say about working with me
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Sahil Dutt",
+                role: "Developer, Wordpress",
+                image: "/testimonial1.jpg",
+                text: "Outstanding work END BABE Delivered the project on time and exceeded our expectations."
+              },
+              {
+                name: "Harnoor Singh",
+                role: "Java, Developer",
+                image: "/testimonial2.jpg",
+                text: "A true professional who understands both design and functionality."
+              },
+              {
+                name: "AMAR",
+                role: "BUGGU, MY LOVE",
+                image: "/testimonial3.jpg",
+                text: "Excellent communication and problem-solving skills. Highly recommended!"
+              }
+            ].map((testimonial, index) => (
+              <div key={index} className="p-8 rounded-xl bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm">
+                <div className="flex items-center mb-6">
+                  <div className="relative w-12 h-12 mr-4">
+                    <Image
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      fill
+                      className="rounded-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-white font-semibold">{testimonial.name}</h3>
+                    <p className="text-gray-400 text-sm">{testimonial.role}</p>
+                  </div>
+                </div>
+                <p className="text-gray-300 italic">"{testimonial.text}"</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Preview Section - New */}
+      <section className="py-20 px-6">
+        <div className="container mx-auto">
+          <div className="flex justify-between items-center mb-12">
+            <h2 className="text-3xl font-bold text-white">Latest Articles</h2>
+            <Link 
+              href="/blog"
+              className="text-blue-500 hover:text-blue-400 transition"
+            >
+              View All Posts →
+            </Link>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Modern Web Development Trends",
+                date: "March 15, 2024",
+                image: "/blog1.jpg",
+                excerpt: "Exploring the latest trends in web development and what's coming next."
+              },
+              {
+                title: "Optimizing React Applications",
+                date: "March 10, 2024",
+                image: "/blog2.jpg",
+                excerpt: "Best practices for building fast and efficient React applications."
+              },
+              {
+                title: "The Future of Web Design",
+                date: "March 5, 2024",
+                image: "/blog3.jpg",
+                excerpt: "Predictions and insights about the future of web design."
+              }
+            ].map((post, index) => (
+              <Link 
+                href={`/blog/${index}`} 
+                key={index}
+                className="group"
+              >
+                <div className="rounded-xl overflow-hidden bg-gray-800/30 hover:bg-gray-700/30 transition">
+                  <div className="relative h-48">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition duration-300"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <p className="text-blue-400 text-sm mb-2">{post.date}</p>
+                    <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition">
+                      {post.title}
+                    </h3>
+                    <p className="text-gray-400">{post.excerpt}</p>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Contact CTA */}
+      <section className="py-20 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10" />
+        <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-5" />
+        <div className="container mx-auto relative">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Let's Build Something Amazing Together
+            </h2>
+            <p className="text-gray-300 text-lg mb-8">
+              Have a project in mind? Let's discuss how we can bring your vision to life.
+              I'm always excited to take on new challenges and create exceptional digital experiences.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 
+                         text-white font-semibold hover:opacity-90 transition"
+            >
+              Get in Touch
+            </Link>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
