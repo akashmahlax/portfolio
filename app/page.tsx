@@ -19,7 +19,7 @@ export default function Home() {
                 <h2 className="text-blue-500 text-xl font-semibold">Welcome to my portfolio</h2>
                 <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
                   Transforming Ideas Into
-                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
+                  <span className="block text-transparent pb-3 bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
                     Digital Reality
                   </span>
                 </h1>
@@ -31,7 +31,7 @@ export default function Home() {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
                 <Link 
-                  href="/contact" 
+                  href="https://instagram.com/akashmahlax" 
                   className="px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold hover:opacity-90 transition"
                 >
                   Let's Work Together
@@ -56,7 +56,7 @@ export default function Home() {
                     href={social.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-white text-2xl transition"
+                    className="text-gray-400 hover:text-white text-7xl mx-4 transition"
                   >
                     <social.icon />
                   </a>
@@ -67,10 +67,10 @@ export default function Home() {
             <div className="lg:w-1/2 relative">
               <div className="relative w-72 h-72 lg:w-[500px] lg:h-[500px]">
                 <Image
-                  src="/akash.jpg"
+                  src="/IMG_2239.JPG"
                   alt="Developer Portrait"
                   fill
-                  className="rounded-full object-cover"
+                  className="rounded-full  object-cover"
                   priority
                 />
                 <div className="absolute inset-0 rounded-full bg-gradient-to-b from-blue-500/20 to-purple-500/20" />
@@ -132,7 +132,7 @@ export default function Home() {
         </div>
       </section>
        {/* Skills Section */}
-       <div className="mt-16  text-white gap-6">
+       <div className="mt-16 mx-10  text-white gap-6">
             <h2 className="text-2xl justify-self-center font-bold mb-6">Technical Skills</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {/* Frontend */}
@@ -311,7 +311,7 @@ export default function Home() {
                       src={post.image}
                       alt={post.title}
                       fill
-                      className="object-cover group-hover:scale-105 transition duration-300"
+                      className="object-cover  opacity-40 group-hover:scale-105 transition duration-300"
                     />
                   </div>
                   <div className="p-6">
@@ -349,6 +349,12 @@ export default function Home() {
               Get in Touch
             </Link>
           </div>
+
+          <footer>
+            <h1 className='text-center mt-10 text-white'> Made with ❤️ by Akash Mahla</h1>
+            <p className='text-center text-white'> &copy; {new Date().getFullYear()} Akash. All rights reserved.</p>
+         
+          </footer>
         </div>
       </section>
     </main>
