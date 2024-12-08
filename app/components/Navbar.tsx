@@ -28,6 +28,9 @@ export default function Navbar() {
             <Link href="/contact" className="text-gray-300 hover:text-white transition">
               Contact
             </Link>
+            <Link href="/intro" className="text-gray-300 hover:text-white transition">
+              Intro
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -76,6 +79,13 @@ export default function Navbar() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
+              </Link>
+              <Link 
+                href="/intro" 
+                className="block px-3 py-2 text-gray-300 hover:text-white transition"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Intro
               </Link>
             </div>
           </div>

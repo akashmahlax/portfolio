@@ -63,7 +63,7 @@ export default function Home() {
             <div className="lg:w-1/2 relative">
               <div className="relative w-72 h-72 lg:w-[500px] lg:h-[500px]">
                 <Image
-                  src="/avatar.png"
+                  src="/akash.jpg"
                   alt="Developer Portrait"
                   fill
                   className="rounded-full object-cover"
@@ -143,20 +143,20 @@ export default function Home() {
               {
                 name: "Sahil Dutt",
                 role: "Developer, Wordpress",
-                image: "/testimonial1.jpg",
-                text: "Outstanding work END BABE Delivered the project on time and exceeded our expectations."
+                image: "/sahil.jpg",
+                text: "bhut vadia Outstanding work END BABE Delivered the project on time and exceeded our expectations."
               },
               {
                 name: "Harnoor Singh",
                 role: "Java, Developer",
-                image: "/testimonial2.jpg",
-                text: "A true professional who understands both design and functionality."
+                image: "/manna.jpg",
+                text: "sirra att A true professional who understands both design and functionality."
               },
               {
                 name: "AMAR",
                 role: "BUGGU, MY LOVE",
-                image: "/testimonial3.jpg",
-                text: "Excellent communication and problem-solving skills. Highly recommended!"
+                image: "/me.jpg",
+                text: "mera putt Excellent communication and problem-solving skills. mai eno highly recommended krdi a!"
               }
             ].map((testimonial, index) => (
               <div key={index} className="p-8 rounded-xl bg-gradient-to-br from-gray-700/30 to-gray-800/30 backdrop-blur-sm">
@@ -199,19 +199,19 @@ export default function Home() {
               {
                 title: "Modern Web Development Trends",
                 date: "March 15, 2024",
-                image: "/blog1.jpg",
+                image: "/trends.png",
                 excerpt: "Exploring the latest trends in web development and what's coming next."
               },
               {
                 title: "Optimizing React Applications",
                 date: "March 10, 2024",
-                image: "/blog2.jpg",
+                image: "/react.png",
                 excerpt: "Best practices for building fast and efficient React applications."
               },
               {
                 title: "The Future of Web Design",
                 date: "March 5, 2024",
-                image: "/blog3.jpg",
+                image: "/future.png",
                 excerpt: "Predictions and insights about the future of web design."
               }
             ].map((post, index) => (

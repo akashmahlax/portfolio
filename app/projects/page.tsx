@@ -6,8 +6,8 @@ const projects = [
     description: "A full-stack e-commerce platform with user authentication, product management, and payment integration.",
     tech: ["Next.js", "Node.js", "MongoDB", "Stripe"],
     image: "https://via.placeholder.com/600x400",
-    liveLink: "https://your-ecommerce.com",
-    githubLink: "https://github.com/yourusername/ecommerce"
+    liveLink: "https://amazon.com",
+    githubLink: "https://github.com/akashmahlax/ecommerce"
   },
   {
     title: "Task Management App",
@@ -47,7 +47,7 @@ const projects = [
     tech: ["Next.js", "Tailwind CSS", "TypeScript"],
     image: "https://via.placeholder.com/600x400",
     liveLink: "https://your-portfolio.com",
-    githubLink: "https://github.com/yourusername/portfolio"
+    githubLink: "https://github.com/akashmahlax/portfolio"
   }
 ];
 
@@ -65,11 +65,11 @@ export default function Projects() {
             {projects.map((project, index) => (
               <div 
                 key={index} 
-                className="bg-gray-800 rounded-xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300 shadow-lg hover:shadow-2xl"
+                className="bg-gray-800 rounded-xl overflow-hidden transform hover:--y-2 transition-all duration-300 shadow-lg hover:shadow-2xl"
               >
                 <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={project.image} 
+                  <image 
+                    src={project.image} translate
                     alt={project.title}
                     className="w-full h-full object-cover transform hover:scale-110 transition-all duration-500"
                   />
