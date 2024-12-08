@@ -12,7 +12,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className='flex items-center'>
             <img src="./IMG_2370.jpg" alt="logo" className='w-20 h-20 m-2 p-2 rounded-full object-cover' />
-            <Link href="https://instagram.com/akashmahlax" className="text-2xl hover:text-green-400 font-mono font-thin px-2 text-white bg-white/10 rounded-lg">
+            <Link href="https://instagram.com/akashmahlax" className="text-2xl hover:text-green-400 font-mono font-thin px-2 text-white bg-white/10 git  rounded-lg">
               Akash
             </Link>
           </div>
