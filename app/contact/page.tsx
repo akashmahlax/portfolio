@@ -1,6 +1,10 @@
 'use client';
+import type { Metadata } from "next";
+
+
 // Removed import of framer-motion
 export default function Contact() {
+  
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white pt-24">
       <div className="container mx-auto px-6 py-20">
