@@ -21,9 +21,9 @@ export default function About() {
             </div>
             <div className="md:col-span-1">
               <img 
-                src="/your-image.jpg" 
+                src="/akash.jpg" 
                 alt="Profile" 
-                className="rounded-lg shadow-xl w-full"
+                className="rounded-lg shadow-xl opacity-50  w-full h-52 object-cover "
               />
             </div>
           </div>
@@ -83,9 +83,9 @@ export default function About() {
                 <div className="flex justify-between items-start mb-4">
                   <div>
                     <h3 className="text-xl font-semibold">Senior Web Developer</h3>
-                    <p className="text-blue-400">Company Name</p>
+                    <p className="text-blue-400">Freelancing</p>
                   </div>
-                  <span className="text-gray-400">2021 - Present</span>
+                  <span className="text-gray-400">2025 - Present</span>
                 </div>
                 <ul className="text-gray-300 list-disc list-inside space-y-2">
                   <li>Led development of multiple full-stack web applications</li>
@@ -98,9 +98,9 @@ export default function About() {
                 <div className="flex justify-between items-start mb-4">
                   <div>
                     <h3 className="text-xl font-semibold">Web Developer</h3>
-                    <p className="text-blue-400">Previous Company</p>
+                    <p className="text-blue-400">Sukh Chandigarh</p>
                   </div>
-                  <span className="text-gray-400">2019 - 2021</span>
+                  <span className="text-gray-400">2018 - 2023</span>
                 </div>
                 <ul className="text-gray-300 list-disc list-inside space-y-2">
                   <li>Developed responsive web applications using React and Node.js</li>
@@ -118,12 +118,20 @@ export default function About() {
               <div className="flex justify-between items-start">
                 <div>
                   <h3 className="text-xl font-semibold">Bachelor of Science in Computer Science</h3>
-                  <p className="text-blue-400">University Name</p>
+                  <p className="text-blue-400">Baring Union College Batala</p>
                 </div>
-                <span className="text-gray-400">2015 - 2019</span>
+                <span className="text-gray-400">2018 - 2021</span>
+              </div>
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-xl font-semibold">Master of Science in Information Technology</h3>
+                  <p className="text-blue-400">Sikh National College Qadian</p>
+                </div>
+                <span className="text-gray-400">2021 - 2023</span>
               </div>
             </div>
           </div>
+         
         </div>
       </div>
     </div>

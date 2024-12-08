@@ -2,6 +2,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
 import { HiCode, HiDesktopComputer, HiSparkles, HiLightningBolt } from 'react-icons/hi';
+import { FaReact, FaNodeJs, FaPython, FaGit, FaDocker, FaAws } from 'react-icons/fa';
+import { SiNextdotjs, SiTypescript, SiTailwindcss, SiExpress, SiMongodb,  SiGraphql } from 'react-icons/si';
+import { AiFillApi } from 'react-icons/ai';
+import { BiGitBranch } from 'react-icons/bi';
 
 export default function Home() {
   return (
@@ -127,6 +131,87 @@ export default function Home() {
           </div>
         </div>
       </section>
+       {/* Skills Section */}
+       <div className="mt-16  text-white gap-6">
+            <h2 className="text-2xl justify-self-center font-bold mb-6">Technical Skills</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {/* Frontend */}
+              <div className="bg-gradient-to-tl from-gray-700 to bg-slate-800 p-4 rounded-lg">
+                <h3 className="font-semibold mb-3">Frontend</h3>
+                <ul className="text-green-600">
+                  <li className="bg-gray-700 px-3 py-1 rounded-full m-2 flex items-center gap-2">
+                    <FaReact className="text-xl" /> React.js
+                  </li>
+                  <li className="font-mono font-extrabold text-2xl bg-gray-700 px-3 py-1 rounded-full m-2 flex items-center gap-2">
+                    <SiNextdotjs className="text-xl" /> Next.js
+                  </li>
+                  <li className="bg-gray-700 px-3 py-1 rounded-full m-2 font-bold font-mono flex items-center gap-2">
+                    <SiTypescript className="text-xl" /> TypeScript
+                  </li>
+                  <li className="bg-gray-700 px-3 py-1 rounded-full m-2 flex items-center gap-2">
+                    <SiTailwindcss className="text-xl" /> Tailwind CSS
+                  </li>
+                </ul>
+              </div>
+              {/* Backend */}
+              <div className="bg-gradient-to-tl from-slate-700 to bg-slate-800 p-4 rounded-lg">
+                <h3 className="font-semibold mb-3">Backend</h3>
+                <ul className="text-blue-400">
+                  <li className="bg-gray-700 px-3 py-1 rounded-full m-2 flex items-center gap-2">
+                    <FaNodeJs className="text-xl" /> Node.js
+                  </li>
+                  <li className="bg-gray-700 px-3 py-1 rounded-full m-2 flex items-center gap-2">
+                    <FaPython className="text-xl" /> Python
+                  </li>
+                  <li className="font-mono font-extrabold text-2xl bg-gray-700 px-3 py-1 rounded-full m-2 flex items-center gap-2">
+                    <SiExpress className="text-xl" /> Express.js
+                  </li>
+                  <li className="bg-gray-700 px-3 py-1 rounded-full m-2 flex items-center gap-2">
+                    <SiMongodb className="text-xl" /> MongoDB
+                  </li>
+                </ul>
+              </div>
+              {/* Tools */}
+              <div className="bg-gradient-to-tl from-slate-700 to bg-slate-800 p-4 rounded-lg">
+                <h3 className="font-semibold mb-3">Tools</h3>
+                <ul className="text-indigo-500">
+                  <li className="font-mono font-extrabold bg-gray-700 px-3 py-1 rounded-full m-2 text-xl flex items-center gap-2">
+                    <FaGit className="text-xl" /> Git
+                  </li>
+                  <li className="font-serif font-bold bg-gray-700 px-3 py-1 rounded-full m-2 flex items-center gap-2">
+                     vscode
+                  </li>
+                  <li className="font-mono font-extrabold text-xl bg-gray-700 px-3 py-1 rounded-full m-2 flex items-center gap-2">
+                     Cursor ai
+                  </li>
+                  <li className="bg-gray-700 px-3 py-1 rounded-full m-2 flex items-center gap-2">
+                    <FaDocker className="text-xl" /> Docker
+                  </li>
+                  <li className="bg-gray-700 px-3 py-1 rounded-full m-2 flex items-center gap-2">
+                    <FaAws className="text-xl" /> AWS
+                  </li>
+                </ul>
+              </div>
+              {/* Learning */}
+              <div className="bg-gradient-to-tl from-slate-700 to bg-slate-800 p-4 rounded-lg">
+                <h3 className="font-semibold mb-3">Learning</h3>
+                <ul className="text-gray-400">
+                  <li className="bg-gray-700 px-3 py-1 rounded-full m-2 flex items-center gap-2">
+                    <AiFillApi className="text-xl" /> REST APIs <span className="text-green-500">(Learned)</span>
+                  </li>
+                  <li className="bg-gray-700 px-3 py-1 rounded-full m-2 flex items-center gap-2">
+                    <SiGraphql className="text-xl" /> GraphQL
+                  </li>
+                  <li className="bg-gray-700 px-3 py-1 rounded-full m-2 flex items-center gap-2">
+                    <BiGitBranch className="text-xl" /> CI/CD
+                  </li>
+                  <li className="bg-gray-700 px-3 py-1 rounded-full m-2 flex items-center gap-2">
+                    <FaGit className="text-xl" /> Agile/Scrum
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
       {/* Testimonials Section - New */}
       <section className="py-20 px-6 bg-gray-800/30">
@@ -198,19 +283,19 @@ export default function Home() {
             {[
               {
                 title: "Modern Web Development Trends",
-                date: "March 15, 2024",
+                date: "Oct 15, 2024",
                 image: "/trends.png",
                 excerpt: "Exploring the latest trends in web development and what's coming next."
               },
               {
                 title: "Optimizing React Applications",
-                date: "March 10, 2024",
+                date: "Dec 10, 2024",
                 image: "/react.png",
                 excerpt: "Best practices for building fast and efficient React applications."
               },
               {
                 title: "The Future of Web Design",
-                date: "March 5, 2024",
+                date: "Nov 5, 2024",
                 image: "/future.png",
                 excerpt: "Predictions and insights about the future of web design."
               }

@@ -1,4 +1,5 @@
 'use client';
+import Image from "next/image";
 
 const projects = [
   {
@@ -6,8 +7,8 @@ const projects = [
     description: "A full-stack e-commerce platform with user authentication, product management, and payment integration.",
     tech: ["Next.js", "Node.js", "MongoDB", "Stripe"],
     image: "https://via.placeholder.com/600x400",
-    liveLink: "https://amazon.com",
-    githubLink: "https://github.com/akashmahlax/ecommerce"
+    liveLink: "https://your-ecommerce.com",
+    githubLink: "https://github.com/yourusername/ecommerce"
   },
   {
     title: "Task Management App",
@@ -47,7 +48,7 @@ const projects = [
     tech: ["Next.js", "Tailwind CSS", "TypeScript"],
     image: "https://via.placeholder.com/600x400",
     liveLink: "https://your-portfolio.com",
-    githubLink: "https://github.com/akashmahlax/portfolio"
+    githubLink: "https://github.com/yourusername/portfolio"
   }
 ];
 
@@ -65,11 +66,11 @@ export default function Projects() {
             {projects.map((project, index) => (
               <div 
                 key={index} 
-                className="bg-gray-800 rounded-xl overflow-hidden transform hover:--y-2 transition-all duration-300 shadow-lg hover:shadow-2xl"
+                className="bg-gray-800 rounded-xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300 shadow-lg hover:shadow-2xl"
               >
                 <div className="relative h-48 overflow-hidden">
-                  <image 
-                    src={project.image} translate
+                  <img
+                    src={project.image} 
                     alt={project.title}
                     className="w-full h-full object-cover transform hover:scale-110 transition-all duration-500"
                   />
