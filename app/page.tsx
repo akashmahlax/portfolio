@@ -9,14 +9,14 @@ import { BiGitBranch } from 'react-icons/bi';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
+    <main className="min-h-screen w-full bg-gradient-to-b from-slate-900 via-slate-800 to-gray-900">
       {/* Hero Section */}
       <section className="min-h-screen flex items-center pt-20 px-6">
         <div className="container mx-auto">
-          <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+          <div className="flex container flex-col-reverse lg:flex-row items-center justify-between gap-12">
             <div className="lg:w-1/2 text-center lg:text-left">
               <div className="space-y-4 mb-8">
-                <h2 className="text-blue-500 text-xl font-semibold">Welcome to my portfolio</h2>
+                <h2 className="text-greencd cd-500 text-xl font-semibold">Welcome to my portfolio</h2>
                 <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
                   Transforming Ideas Into
                   <span className="block text-transparent pb-3 bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
@@ -67,7 +67,7 @@ export default function Home() {
             <div className="lg:w-1/2 relative">
               <div className="relative w-72 h-72 lg:w-[500px] lg:h-[500px]">
                 <Image
-                  src="/IMG_2239.JPG"
+                  src="/manna.JPG"
                   alt="Developer Portrait"
                   fill
                   className="rounded-full  object-cover"
@@ -197,7 +197,7 @@ export default function Home() {
                 <h3 className="font-semibold mb-3">Learning</h3>
                 <ul className="text-gray-400">
                   <li className="bg-gray-700 px-3 py-1 rounded-full m-2 flex items-center gap-2">
-                    <AiFillApi className="text-xl" /> REST APIs <span className="text-green-500">(Learned)</span>
+                    <AiFillApi className="text-xl" /> <p> REST APIs <span className="text-green-500 flex inline">(Learned)</span></p>
                   </li>
                   <li className="bg-gray-700 px-3 py-1 rounded-full m-2 flex items-center gap-2">
                     <SiGraphql className="text-xl" /> GraphQL

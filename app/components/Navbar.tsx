@@ -11,7 +11,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className='flex items-center'>
-            <img src="./IMG_2370.jpg" alt="logo" className='w-20 h-20 m-2 p-2 rounded-full object-cover' />
+            <img src="./manna.jpg" alt="logo" className='w-20 h-20 m-2 p-2 rounded-full object-cover' />
             <Link href="https://instagram.com/akashmahlax" className="text-2xl hover:text-green-400 font-mono font-thin px-2 text-white bg-white/10 git  rounded-lg">
               Akash
             </Link>
@@ -22,7 +22,7 @@ export default function Navbar() {
             <Link href="/" className="text-gray-300 hover:text-white transition">
               Home
             </Link>
-            <Link href="/about" className="text-gray-300 hover:text-white transition">
+            <Link href="/about" className="text-gray-300 hover:text-yellow-400 transition">
               About
             </Link>
             <Link href="/projects" className="text-gray-300 hover:text-white transition">
